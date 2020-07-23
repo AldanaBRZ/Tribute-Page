@@ -1,0 +1,160 @@
+body {
+  text-align: center;
+  margin: 0;
+  background-color: #68839c;
+  color: rgb(41, 41, 41);
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  padding: 10px;
+}
+
+#image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+}
+
+#tribute-info p {
+  padding: 15px
+}
+
+.timeline {
+  position: relative;
+  margin: 0 auto;
+  width: 90%;
+  margin-top: 70px;
+}
+
+.timeline ul li {
+  margin-bottom: 50px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.point {
+  min-width: 20px;
+  height: 20px;
+  background-color: #003559;
+  border-radius: 100%;
+  z-index: 2;
+  box-shadow: 0 0 0 4px #001625, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+  position: relative;
+  left: -50%;
+}
+
+.timeline ul li .content {
+  width: 50%;
+  padding: 0 20px;
+}
+
+.timeline ul li .date {
+  width: 50%;
+  padding: 0;
+  font-weight: normal;
+}
+
+.timeline ul li .date h4 {
+  background-color: #003559;
+  color: rgb(255, 255, 255);
+  width: 100px;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin: 0;
+}
+
+.timeline ul li .content p {
+  padding: 10px 20px;
+  background-color: #006DAA;
+  color: rgb(214, 214, 214);
+  margin-top: 0;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 3px;
+  left: 0%;
+  background-color: #003559;
+}
+
+.timeline ul li:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.timeline ul li:nth-child(even) .date h4 {
+  float: right;
+}
+.timeline ul li:nth-child(odd) .content {
+  padding-left: 0;
+}
+.timeline ul li:nth-child(odd) .date {
+  padding-right: 0;
+}
+.timeline ul li:nth-child(even) .content {
+  padding-right: 0;
+}
+.timeline ul li:nth-child(even) .date {
+  padding-left: 0;
+}
+.timeline::before {
+  left: 50%;
+}
+.point {
+  left: 1px;
+}
+.timeline ul li .date {
+  padding: 0 20px;
+}
+
+@media (max-width: 800px) {
+  body {
+    font-size: 15px;
+  }
+
+  .point {
+    min-width: 15px;
+    height: 15px;
+  }
+
+  .timeline {
+    margin: 0;
+    margin-top: 40px;
+  }
+
+  ul {
+    padding: 0;
+  }
+}
+
+@media (max-width: 650px) {
+  body {
+    font-size: 14px;
+  }
+
+  .point {
+    min-width: 12px;
+    height: 12px;
+  }
+}
+
+@media (max-width: 450px) {
+  body {
+    font-size: 13px;
+  }
+
+  p {
+    padding: 10px !important;
+  }
+}
